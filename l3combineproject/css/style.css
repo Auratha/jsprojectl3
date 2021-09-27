@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Share Tech', sans-serif;
+
+    overflow: hidden;
+}
+/*Start Nav Section*/
+
+nav{
+    height: 15vh;
+    background-color:#80f9ff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    filter: blur(20px);
+
+}
+
+.logo-container img{
+    width: 8rem;
+
+}
+
+.logo-container span{
+    font-size: 3rem;
+
+    position: absolute;
+    top:50%;
+    left:8rem;
+
+    transform: translateY(-50%);
+}
+
+.toggle{
+    display: none;
+}
+
+.toggle-container{
+    display: flex;
+    align-items: center;
+}
+
+.toggle-container p{
+    font-size:2rem;
+}
+
+.toggle-container label{
+    width:40px;
+    height: 15px;
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    margin: 0 5px;
+
+    position: relative;
+}
+
+.toggle-container label .square{
+    width: 20px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 4px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    transform: translateY(-50%);
+}
+
+.toggle:checked + label{
+    background-color: #ff861c;
+}
+
+.toggle:checked + label .square{
+   transform: translate(20px,-50%);
+}
+
+.button-container{
+    margin: 0 20px;
+}
+
+.button-container button{
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    background-color: #000;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.button-container button:active{
+    transform: scale(0.95);
+}
+
+/*End Nav Section*/
+
+/*Start Cover Photo Section*/
+.cover{
+    width: 100%;
+    height: 75vh;
+    background-image:url("../img/cover/smartwatchcover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(20px);
+}
+
+.footer-box{
+    height: 10vh;
+    background-color:#80f9ff;
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 10px;
+    filter: blur(20px);
+}
+
+/*End Cover Photo Section*/
+
+/*Start Login Modal Section*/
+.login-modal-container{
+    width: 350px;
+    background-color:#e6e6e6;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    padding: 2rem 3rem;
+
+    position: absolute;
+    top:50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+    z-index: 2;
+}
+
+.login-modal-container h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.login-modal-container .form-control{
+    margin: 1rem 0;
+}
+
+.form-control label{
+    font-size:1.1rem;
+    margin-bottom: 0.4rem;
+
+    display: block;
+}
+
+.form-control input{
+    width:100%;
+    font-family: inherit;
+    padding: 0.3rem 0.3rem;
+}
+
+.form button{
+    width:100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: #ff7575;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.form button:active{
+    transform: scale(0.98);
+}
+
+.form button:focus{
+    outline: none;
+}
+
+.input-div{
+    position: relative;
+}
+
+#lock{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+
+    transform: translateY(-50%);
+}
+/*End Login Modal Section*/
+
+/*Start Pricing Section */
+.pricing-section{
+    display:none;
+}
+
+.items-container{
+    height:75vh;
+    padding: 20px 20px;
+    background-color: #80f9ff;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item{
+    width: 300px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item img{
+    width: 240px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.item p .price1,.item p .price2,.item p .price3{
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.item p span{
+    font-size:1rem;
+    vertical-align: middle;
+}
+
+.add,.remove{
+    border:none;
+    border-radius: 5px;
+    color:#f0f0f0;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 10px;
+
+    transition: all 0.4s;
+}
+
+.add:hover,.remove:hover{
+    transform: scale(1.2);
+}
+
+.add{
+    background-color: #18de7e;
+
+}
+
+.remove{
+    background-color: #ff3333;
+}
+/*End Pricing Section*/
+
+/*Start Toast Notification*/
+.toast{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.toast-div{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast-div.green{
+    background-color: #18de7e;
+}
+
+.toast-div.red{
+    background-color: #ff3333;
+}
+
+.toast-div p{
+    color:#fff;
+    font-size: 1.2rem;
+}
+/*End Toast Notification*/
+
+/*Start Menu Section*/
+.menu-container{
+    width: 100%;
+    height: 100vh;
+
+    display: none;
+
+    position: absolute;
+    top:0;
+    left: 0;
+
+}
+
+.menu-container.active{
+    z-index: 1;
+}
+
+.left-div{
+    width:25%;
+    height: 100%;
+    background-color:#18de7e;
+
+    transform: translateX(-100%);
+
+    transition: all 1.4s;
+}
+
+.middle-div{
+    width:50%;
+    height: 100%;
+    background-color:#80f9ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transform: translateY(-100%);
+
+    transition: all 1.4s;
+}
+
+.right-div{
+    width:25%;
+    height: 100%;
+    background-color:#18de7e;
+
+    position: relative;
+
+    transform: translateX(100%);
+
+    transition: all 1.4s;
+}
+
+.left-div.active,.middle-div.active,.right-div.active{
+    transform: translate(0,0);
+}
+
+.middle-div p{
+    font-size: 2rem;
+    color:#000000;
+    cursor: pointer;
+}
+
+.menu-btn button{
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    background-color: #000;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+
+.menu-btn button:active{
+    transform: scale(0.98);
+}
+/*End Menu Section*/
